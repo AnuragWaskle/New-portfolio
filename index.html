@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Waskle | Web Developer & Creative Professional</title>
+    <!-- You'll add your own CSS here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* You can replace this with your own CSS file */
+        /* :root {
+            --primary-bg: #0a192f;
+            --secondary-bg: #112240;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+            --accent: #64ffda;
+            --dark-accent: #1e3a8a;
+        }
+
+        body.light-mode {
+            --primary-bg: #f0f4f8;
+            --secondary-bg: #dbe4ee;
+            --text-primary: #0a192f;
+            --text-secondary: #3a506b;
+            --accent: #0066cc;
+            --dark-accent: #004d99;
+        }
+
+        /* Basic styling for preview - you'll implement your own CSS */
+        /* body {
+            font-family: 'Consolas', monospace;
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        } */
+    </style> */
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div id="theme-toggle">
+        <i class="fas fa-moon" id="dark-mode-toggle"></i>
+        <i class="fas fa-sun" id="light-mode-toggle" style="display: none;"></i>
+    </div>
+
+    <!-- Particles Background - You'll implement this with a JS library -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <span class="code-tag">&lt;</span>AW<span class="code-tag">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#creative">Creative Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="assets/anurag Waskle resume.pdf" class="resume-btn">Resume</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="binary-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch-text">Hi, I'm Anurag Waskle</h1>
+            <div class="typewriter">
+                <span id="typewriter-text"></span><span class="cursor">|</span>
+            </div>
+            <p class="hero-subtitle">Full Stack Developer & Creative Professional</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-btn primary">View Projects</a>
+                <a href="#contact" class="cta-btn secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2><span class="section-number">01.</span> About Me</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm Anurag, a passionate B.Tech CSE student at VIT Bhopal with a deep interest in technology, AI, and visual storytelling.</p>
+                <p>My journey in tech began with web development, where I've built various full-stack applications using the MERN stack. I'm currently exploring AI/ML and React Native for mobile app development.</p>
+                <p>Beyond coding, I have a creative side that expresses itself through cinematography and photography. I've directed travel documentaries and enjoy capturing stories through my lens.</p>
+                <p>I'm an active hackathon participant, problem-solver, and always eager to tackle new challenges in the tech world.</p>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>VIT Bhopal University</h4>
+                        <p>B.Tech in Computer Science (2023-2027)</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Holy Spirit Convent School, Khandwa</h4>
+                        <p>Higher Secondary School, CBSE Board (2022-2023)</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Holy Spirit Convent School, Khandwa</h4>
+                        <p>High School, CBSE Board (2020-2021)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <!-- You'll add your profile image here -->
+                <div class="profile-img-container">
+                    <div class="profile-img-frame"></div>
+                    <img src="assets/anu.jpg" alt="Anurag Waskle" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2><span class="section-number">02.</span> Skills</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h4>Full Stack Development (MERN)</h4>
+                        <ul>
+                            <li>MongoDB - NoSQL database management</li>
+                            <li>Express.js - Backend web application framework</li>
+                            <li>React.js - Frontend JavaScript library</li>
+                            <li>Node.js - JavaScript runtime environment</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h4>Database Management</h4>
+                        <ul>
+                            <li>MySQL - Relational database management</li>
+                            <li>MongoDB - Document-oriented database</li>
+                            <li>Firebase - Cloud-hosted database</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>JavaScript </li>
+                            <li>Python - Intermediate</li>
+                            <li>Java - Basics</li>
+                            <li>C++ - Basics</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                        <h4>Web Design</h4>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>Responsive Design</li>
+                            <li>UI/UX Principles</li>
+                            <li>Figma (Design Tools)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        <h4>AI & Machine Learning</h4>
+                        <ul>
+                            <li>Prompt Engineering</li>
+                            <li>Generative AI</li>
+                            <li>Machine Learning Basics</li>
+                            <li>Gemini AI Integration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Mobile Development</h4>
+                        <ul>
+                            <li>React Native (Learning)</li>
+                            <li>Responsive Mobile Design</li>
+                            <li>Cross-platform Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Creative Skills -->
+            <div class="skill-category">
+                <h3>Creative Skills</h3>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-camera"></i></div>
+                        <h4>Visual Media</h4>
+                        <ul>
+                            <li>Cinematography</li>
+                            <li>Photography</li>
+                            <li>Composition & Lighting</li>
+                            <li>Storytelling through visuals</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-edit"></i></div>
+                        <h4>Content Creation</h4>
+                        <ul>
+                            <li>Video Editing</li>
+                            <li>Photo Editing</li>
+                            <li>Content Writing</li>
+                            <li>Digital Storytelling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-users"></i></div>
+                        <h4>Collaboration & Leadership</h4>
+                        <ul>
+                            <li>Team Collaboration</li>
+                            <li>Problem-solving</li>
+                            <li>Project Management</li>
+                            <li>Time Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-comment"></i></div>
+                        <h4>Communication</h4>
+                        <ul>
+                            <li>Presentation Skills</li>
+                            <li>Technical Documentation</li>
+                            <li>Client Communication</li>
+                            <li>Visual Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="section-header">
+            <h2><span class="section-number">03.</span> Experience</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Hackathon Finalist – Binary Battle 2025</h3>
+                    <h4>RNTU Bhopal & Scope Global Skills University</h4>
+                    <p class="timeline-date">2025</p>
+                    <div class="timeline-description">
+                        <p>Secured 5th position in a 24-hour hackathon despite technical issues during final code submission.</p>
+                        <p>Built a practical solution under pressure; gained hands-on teamwork and presentation experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Freelance Developer & Creative Artist</h3>
+                    <h4>Self-employed</h4>
+                    <p class="timeline-date">2023 - Present</p>
+                    <div class="timeline-description">
+                        <p>Built websites and portfolios for college clubs and peers, focusing on clean UI and responsive design.</p>
+                        <p>Directed and edited a travel documentary on Chittorgarh, showcasing skills in cinematography and storytelling.</p>
+                        <p>Provided photo and video editing for professional and campus events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2><span class="section-number">04.</span> Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+            You'll add your project details here -->
+            <!-- <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.jpg" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Project Name</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">Short description of the project. What it does, technologies used, and your role in it.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Add more project cards as needed -->
+            <!-- <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.jpg" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Project Name</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">Short description of the project. What it does, technologies used, and your role in it.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Add more project cards as needed -->
+        <!-- </div>
+        <div class="more-projects">
+            <a href="https://github.com/YourGithubUsername" target="_blank" class="more-btn">More Projects on GitHub <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section> -->
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2><span class="section-number">04.</span> Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="github-showcase">
+            <div class="github-card">
+                <div class="github-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="github-content">
+                    <h3>Check Out My Projects on GitHub</h3>
+                    <p>Explore my repositories to see my work in web development, AI integrations, and creative coding projects.</p>
+                    <a href="https://github.com/AnuragWaskle?tab=repositories" target="_blank" class="github-btn">View GitHub Profile <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Creative Work Section -->
+    <section id="creative" class="creative">
+        <div class="section-header">
+            <h2><span class="section-number">05.</span> Creative Work</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="creative-content">
+            <div class="cinematic-work">
+                <h3>Cinematography</h3>
+                <div class="video-showcase">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-description">
+                            <h4>Chittorgarh Travel Documentary</h4>
+                            <p>A visual journey through the historic fortress city of Chittorgarh, capturing its architectural marvel and rich cultural heritage.</p>
+                        </div>
+                    </div>
+                    <!-- Add more video containers as needed -->
+                </div>
+            </div>
+            <div class="photography-work">
+                <h3>Photography</h3>
+                <div class="photo-gallery">
+                    <!-- Replace with your actual photos -->
+                    <div class="photo-item">
+                        <img src="photo1.jpg" alt="Photography Sample 1">
+                    </div>
+                    <div class="photo-item">
+                        <img src="photo2.jpg" alt="Photography Sample 2">
+                    </div>
+                    <div class="photo-item">
+                        <img src="photo3.jpg" alt="Photography Sample 3">
+                    </div>
+                    <div class="photo-item">
+                        <img src="photo4.jpg" alt="Photography Sample 4">
+                    </div>
+                    <!-- Add more photo items as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2><span class="section-number">06.</span> Contact</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-text">
+                <h3>Get In Touch</h3>
+                <p>I'm currently looking for new opportunities and internships. Whether you have a question or just want to say hello, I'll try my best to get back to you!</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:anuragwaskle2022@gmail.com">anuragwaskle2022@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+918959759566">+91 8959759566</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Khandwa, Indore, MP</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="www.linkedin.com/in/anuragwaskle2022" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/AnuragWaskle?tab=repositories" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/anurag_waskle?igsh=eDQ4Y3JnNXhtcGN3&utm_source=qr" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <!-- Add more social links as needed -->
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="code-tag">&lt;</span>AW<span class="code-tag">/&gt;</span>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#creative">Creative Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anurag Waskle. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for theme toggle, animations, etc. -->
+    <script>
+        // Theme toggle functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const lightModeToggle = document.getElementById('light-mode-toggle');
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.add('light-mode');
+            darkModeToggle.style.display = 'none';
+            lightModeToggle.style.display = 'block';
+        });
+        
+        lightModeToggle.addEventListener('click', () => {
+            document.body.classList.remove('light-mode');
+            lightModeToggle.style.display = 'none';
+            darkModeToggle.style.display = 'block';
+        });
+
+        // Typewriter effect for hero section
+        const typewriterText = document.getElementById('typewriter-text');
+        const phrases = [
+            "Full Stack Developer",
+            "Web Designer",
+            "Cinematographer",
+            "AI Enthusiast",
+            "Problem Solver"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typewriterText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, 500);
+            } else {
+                setTimeout(typeWriter, isDeleting ? 100 : 150);
+            }
+        }
+        
+        window.onload = function() {
+            typeWriter();
+        };
+
+        // Mobile navigation toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // You'll add more JavaScript functionality as needed
+    </script>
+
+    <!-- You'll need to add particles.js or a similar library for the background effect -->
+</body>
+</html>
