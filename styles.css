@@ -942,6 +942,117 @@ body.light-mode #navbar {
     transform: scale(1.05);
 }
 
+/* Blog Section  */
+
+/* ====== BLOG SECTION ====== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    background-color: var(--secondary-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blog-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px -15px rgba(2, 12, 27, 0.8);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-content h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.blog-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.blog-link i {
+    margin-left: 8px;
+    transition: var(--transition);
+}
+
+.blog-link:hover {
+    color: var(--text-primary);
+}
+
+.blog-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive styles for blog section */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .blog-excerpt {
+        font-size: 0.85rem;
+    }
+}
+
 /* ====== CONTACT SECTION ====== */
 .contact-content {
     max-width: 800px;
