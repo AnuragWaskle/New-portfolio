@@ -3,40 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Waskle | Web Developer & Creative Professional</title>
-    <!-- You'll add your own CSS here -->
+    <title>Anurag Waskle | Chittorgarh & Udaipur Travel Vlog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* You can replace this with your own CSS file */
-        /* :root {
-            --primary-bg: #0a192f;
-            --secondary-bg: #112240;
-            --text-primary: #ccd6f6;
-            --text-secondary: #8892b0;
-            --accent: #64ffda;
-            --dark-accent: #1e3a8a;
-        }
-
-        body.light-mode {
-            --primary-bg: #f0f4f8;
-            --secondary-bg: #dbe4ee;
-            --text-primary: #0a192f;
-            --text-secondary: #3a506b;
-            --accent: #0066cc;
-            --dark-accent: #004d99;
-        }
-
-        /* Basic styling for preview - you'll implement your own CSS */
-        /* body {
-            font-family: 'Consolas', monospace;
-            background-color: var(--primary-bg);
-            color: var(--text-primary);
-            margin: 0;
-            padding: 0;
-            transition: all 0.3s ease;
-        } */
-    </style>
+    <link rel="stylesheet" href="chittor.css">
 </head>
 <body>
     <!-- Theme Toggle -->
@@ -45,8 +18,14 @@
         <i class="fas fa-sun" id="light-mode-toggle" style="display: none;"></i>
     </div>
 
-    <!-- Particles Background - You'll implement this with a JS library -->
-    <div id="particles-js"></div>
+    <!-- Floating Navigation Dots -->
+    <div class="nav-dots">
+        <div class="dot active" data-section="hero"></div>
+        <div class="dot" data-section="journey"></div>
+        <div class="dot" data-section="gallery"></div>
+        <div class="dot" data-section="experience"></div>
+        <div class="dot" data-section="memories"></div>
+    </div>
 
     <!-- Navigation -->
     <nav id="navbar">
@@ -54,15 +33,15 @@
             <span class="code-tag"><</span>AW<span class="code-tag">/></span>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#creative">Creative Work</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#creative">Creative Work</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
             <li>
-                <a href="assets/anurag Waskle resume.pdf" class="resume-btn">Resume</a>
+                <a href="../assets/anurag Waskle resume.pdf" class="resume-btn">Resume</a>
             </li>
         </ul>
         <div class="hamburger">
@@ -73,185 +52,107 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="binary-overlay"></div>
+    <section id="hero" class="hero">
         <div class="hero-content">
-            <h1 class="glitch-text">Hi, I'm Anurag Waskle</h1>
-            <div class="typewriter">
-                <href="#typewriter-text"></span><span class="cursor">|</span>
+            <div class="hero-text">
+                <h1 class="hero-title">Journey Through Royal Rajasthan</h1>
+                <p class="hero-subtitle">Chittorgarh & Udaipur Travel Documentary</p>
+                <div class="hero-meta">
+                    <span class="date"><i class="fas fa-calendar"></i> July 06, 2025</span>
+                    <span class="author"><i class="fas fa-user"></i> Anurag Waskle</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> VIT Bhopal University</span>
+                </div>
             </div>
-            <p class="hero-subtitle">Full Stack Developer & Creative Professional</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="cta-btn primary">View Projects</a>
-                <a href="#contact" class="cta-btn secondary">Get In Touch</a>
+            <div class="hero-image">
+                <img src="../assets/Orange and Brown Travel Collection YouTube Thumbnail.png" alt="Chittorgarh Fort" class="floating-image">
+                <div class="image-overlay"></div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="section-header">
-            <h2><span class="section-number">01.</span> About Me</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I'm Anurag, a passionate B.Tech CSE student at VIT Bhopal with a deep interest in technology, AI, and visual storytelling.</p>
-                <p>My journey in tech began with web development, where I've built various full-stack applications using the MERN stack. I'm currently exploring AI/ML and React Native for mobile app development.</p>
-                <p>Beyond coding, I have a creative side that expresses itself through cinematography and photography. I've directed travel documentaries and enjoy capturing stories through my lens.</p>
-                <p>I'm an active hackathon participant, problem-solver, and always eager to tackle new challenges in the tech world.</p>
-                <div class="education">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <h4>VIT Bhopal University</h4>
-                        <p>B.Tech in Computer Science (2023-2027)</p>
+    <!-- Journey Section -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Adventure Begins</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="journey-content">
+                <div class="journey-text">
+                    <div class="text-card">
+                        <h3>From Textbooks to Tales</h3>
+                        <p>Armed with the thrill of a semester break and the camaraderie of five second-year souls from VIT Bhopal University, we piled into a bus bound for Udaipur and Chittorgarh, ready to trade textbooks for tales etched in stone and valor.</p>
                     </div>
-                    <div class="education-item">
-                        <h4>Holy Spirit Convent School, Khandwa</h4>
-                        <p>Higher Secondary School, CBSE Board (2022-2023)</p>
-                    </div>
-                    <div class="education-item">
-                        <h4>Holy Spirit Convent School, Khandwa</h4>
-                        <p>High School, CBSE Board (2020-2021)</p>
+                    
+                    <div class="text-card">
+                        <h3>The Mighty Chittorgarh Fort</h3>
+                        <p>Our adventure kicked off in Chittorgarh, where the mammoth Chittorgarh Fort loomed before us, a rugged giant born in the 7th century under the Mauryans and later sculpted into a Rajput stronghold. This sprawling citadel, scarred by three epic sieges, stood as a silent witness to battles and acts of unmatched valor.</p>
                     </div>
                 </div>
-            </div>
-            <div class="about-image">
-                <!-- You'll add your profile image here -->
-                <div class="profile-img-container">
-                    <div class="profile-img-frame"></div>
-                    <img src="assets/anu.jpg" alt="Anurag Waskle" class="profile-img">
+                
+                <div class="journey-images">
+                    <div class="image-stack">
+                        <img src="../assets/IMG_3391.HEIC" alt="Chittorgarh Fort" class="stack-image">
+                        <img src="../assets/IMG_4277.HEIC" alt="Victory Tower" class="stack-image">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="section-header">
-            <h2><span class="section-number">02.</span> Skills</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="skills-container">
-            <!-- Technical Skills -->
-            <div class="skill-category">
-                <h3>Technical Skills</h3>
-                <div class="skill-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <h4>Full Stack Development (MERN)</h4>
-                        <ul>
-                            <li>MongoDB - NoSQL database management</li>
-                            <li>Express.js - Backend web application framework</li>
-                            <li>React.js - Frontend JavaScript library</li>
-                            <li>Node.js - JavaScript runtime environment</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-database"></i></div>
-                        <h4>Database Management</h4>
-                        <ul>
-                            <li>MySQL - Relational database management</li>
-                            <li>MongoDB - Document-oriented database</li>
-                            <li>Firebase - Cloud-hosted database</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                        <h4>Programming Languages</h4>
-                        <ul>
-                            <li>JavaScript </li>
-                            <li>Python - Intermediate</li>
-                            <li>Java - Basics</li>
-                            <li>C++ - Basics</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-palette"></i></div>
-                        <h4>Web Design</h4>
-                        <ul>
-                            <li>HTML5 & CSS3</li>
-                            <li>Responsive Design</li>
-                            <li>UI/UX Principles</li>
-                            <li>Figma (Design Tools)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                        <h4>AI & Machine Learning</h4>
-                        <ul>
-                            <li>Prompt Engineering</li>
-                            <li>Generative AI</li>
-                            <li>Machine Learning Basics</li>
-                            <li>Gemini AI Integration</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h4>Mobile Development</h4>
-                        <ul>
-                            <li>React Native (Learning)</li>
-                            <li>Responsive Mobile Design</li>
-                            <li>Cross-platform Development</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visual Journey</h2>
+                <div class="section-line"></div>
             </div>
             
-            <!-- Creative Skills -->
-            <div class="skill-category">
-                <h3>Creative Skills</h3>
-                <div class="skill-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-camera"></i></div>
-                        <h4>Visual Media</h4>
-                        <ul>
-                            <li>Cinematography</li>
-                            <li>Photography</li>
-                            <li>Composition & Lighting</li>
-                            <li>Storytelling through visuals</li>
-                        </ul>
+            <div class="gallery-grid">
+                <!-- <div class="gallery-item large">
+                    <img src="../assets/IMG_4788.HEIC" alt="Chittorgarh Fort Main View">
+                    <div class="gallery-overlay">
+                        <h3>Chittorgarh Fort</h3>
+                        <p>The magnificent fortress that witnessed history</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-edit"></i></div>
-                        <h4>Content Creation</h4>
-                        <ul>
-                            <li>Video Editing</li>
-                            <li>Photo Editing</li>
-                            <li>Content Writing</li>
-                            <li>Digital Storytelling</li>
-                        </ul>
+                </div> -->
+                
+                <div class="gallery-item">
+                    <img src="../assets/IMG_4277.HEIC" alt="Victory Tower Detail">
+                    <div class="gallery-overlay">
+                        <h3>Victory Tower</h3>
+                        <p>9-story triumph by Rana Kumbha</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Soft Skills -->
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <div class="skill-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-users"></i></div>
-                        <h4>Collaboration & Leadership</h4>
-                        <ul>
-                            <li>Team Collaboration</li>
-                            <li>Problem-solving</li>
-                            <li>Project Management</li>
-                            <li>Time Management</li>
-                        </ul>
+                
+                <div class="gallery-item">
+                    <img src="../assets/IMG_4366.HEIC" alt="Rani Padmavati Mahal">
+                    <div class="gallery-overlay">
+                        <h3>Rani Padmavati Mahal</h3>
+                        <p>Where legends of courage were born</p>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-comment"></i></div>
-                        <h4>Communication</h4>
-                        <ul>
-                            <li>Presentation Skills</li>
-                            <li>Technical Documentation</li>
-                            <li>Client Communication</li>
-                            <li>Visual Communication</li>
-                        </ul>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="../assets/IMG_4429.jpg" alt="VIT Bhopal Group">
+                    <div class="gallery-overlay">
+                        <h3>VIT Bhopal Squad</h3>
+                        <p>Five souls on an adventure</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item wide">
+                    <img src="../assets/IMG_3533.HEIC" alt="Lake Pichola Udaipur">
+                    <div class="gallery-overlay">
+                        <h3>Lake Pichola</h3>
+                        <p>Shimmering waters of Udaipur</p>
                     </div>
                 </div>
             </div>
@@ -260,186 +161,110 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-        <div class="section-header">
-            <h2><span class="section-number">03.</span> Experience</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Hackathon Finalist – Binary Battle 2025</h3>
-                    <h4>RNTU Bhopal & Scope Global Skills University</h4>
-                    <p class="timeline-date">2025</p>
-                    <div class="timeline-description">
-                        <p>Secured 5th position in a 24-hour hackathon despite technical issues during final code submission.</p>
-                        <p>Built a practical solution under pressure; gained hands-on teamwork and presentation experience.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Living History</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The Victory Tower</h3>
+                        <p>The Victory Tower, or Vijay Stambh, pierced the horizon, a 9-story triumph raised by Rana Kumbha in 1448 to mark his victory over Mahmud Khilji, its carvings a feast for our curious eyes.</p>
+                        <span class="timeline-date">1448 AD</span>
                     </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Freelance Developer & Creative Artist</h3>
-                    <h4>Self-employed</h4>
-                    <p class="timeline-date">2023 - Present</p>
-                    <div class="timeline-description">
-                        <p>Built websites and portfolios for college clubs and peers, focusing on clean UI and responsive design.</p>
-                        <p>Directed and edited a travel documentary on Chittorgarh, showcasing skills in cinematography and storytelling.</p>
-                        <p>Provided photo and video editing for professional and campus events.</p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Rani Padmavati's Legacy</h3>
+                        <p>Nearby, the Rani Padmavati Mahal stood in quiet grace, whispering of the legendary queen whose courage sparked the first of those blazing sacrifices. Her story of valor continues to inspire generations.</p>
+                        <span class="timeline-date">1303 AD</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-header">
-            <h2><span class="section-number">04.</span> Projects</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="github-showcase">
-            <div class="github-card">
-                <div class="github-icon">
-                    <i class="fab fa-github"></i>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Three Acts of Jauhar</h3>
+                        <p>The fort witnessed three epic acts of Jauhar - in 1303, 1535, and 1567 - where queens and women chose fiery defiance over submission, their courage echoing through the ages.</p>
+                        <span class="timeline-date">Multiple Eras</span>
+                    </div>
                 </div>
-                <div class="github-content">
-                    <h3>Check Out My Projects on GitHub</h3>
-                    <p>Explore my repositories to see my work in web development, AI integrations, and creative coding projects.</p>
-                    <a href="https://github.com/AnuragWaskle?tab=repositories" target="_blank" class="github-btn">View GitHub Profile <i class="fas fa-arrow-right"></i></a>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Udaipur's Serenity</h3>
+                        <p>Our journey rolled into Udaipur, a city of shimmering lakes and regal palaces, where the same valorous spirit lingered in every corner, from Lake Pichola to the grand City Palace.</p>
+                        <span class="timeline-date">Present Day</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Creative Work Section -->
-    <section id="creative" class="creative">
-        <div class="section-header">
-            <h2><span class="section-number">05.</span> Creative Work</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="creative-content">
-            <div class="cinematic-work">
-                <h3>Cinematography</h3>
-                <div class="video-showcase">
-                    <div class="video-container">
-                        <iframe src="https://youtu.be/Vaxftj6G6ig?si=s5JuFA5TG7wFa1NC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <div class="video-description">
-                            <h4>Chittorgarh Travel Documentary</h4>
-                            <p>A visual journey through the historic fortress city of Chittorgarh, capturing its architectural marvel and rich cultural heritage.</p>
-                        </div>
+    <!-- Memories Section -->
+    <section id="memories" class="memories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unforgettable Memories</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="memories-content">
+                <div class="memory-card">
+                    <div class="memory-icon">
+                        <i class="fas fa-mountain"></i>
                     </div>
-                    <!-- Add more video containers as needed -->
+                    <h3>Architectural Marvels</h3>
+                    <p>Every stone told a story, every carving held a secret. The intricate architecture left us mesmerized and inspired our creative spirits.</p>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Friendship Bonds</h3>
+                    <p>Five souls from VIT Bhopal, united by curiosity and adventure, creating memories that will last a lifetime.</p>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Lessons in Courage</h3>
+                    <p>The stories of Rajput valor and sacrifice taught us about resilience, courage, and the power of standing up for what's right.</p>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Captured Moments</h3>
+                    <p>Every photograph captures not just a place, but a feeling, a moment of wonder that will inspire our future projects.</p>
                 </div>
             </div>
-            <!-- <div class="photography-work">
-                <h3>Photography</h3>
-                <div class="photo-gallery">
-                    <!-- Replace with your actual photos -->
-                    <!-- <div class="photo-item">
-                        <img src="photo1.jpg" alt="Photography Sample 1">
-                    </div>
-                    <div class="photo-item">
-                        <img src="photo2.jpg" alt="Photography Sample 2">
-                    </div>
-                    <div class="photo-item">
-                        <img src="photo3.jpg" alt="Photography Sample 3">
-                    </div>
-                    <div class="photo-item">
-                        <img src="photo4.jpg" alt="Photography Sample 4">
-                    </div>
-                    <!-- Add more photo items as needed -->
-                </div>
-            </div> 
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="section-header">
-            <h2><span class="section-number">06.</span> Blog</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-image">
-                    <!-- Placeholder for blog image -->
-                    <img src="assets/Orange and Brown Travel Collection YouTube Thumbnail.png" alt="Chittorgarh Fort" >
-                </div>
-                <div class="blog-content">
-                    <h3>A Journey Through Chittorgarh and Udaipur</h3>
-                    <p class="blog-meta">July 06, 2025 | Anurag Waskle</p>
-                    <p class="blog-excerpt">Armed with the thrill of a semester break, five of us from VIT Bhopal explored the historic Chittorgarh Fort and the serene lakes of Udaipur, diving into tales of valor and resilience.</p>
-                    <a href="blogs/chittor.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-image">
-                    <!-- Placeholder for future blog image -->
-                    <img src="assets/placeholder.jpg" alt="Coming Soon">
-                </div>
-                <div class="blog-content">
-                    <h3>More Adventures Coming Soon</h3>
-                    <p class="blog-meta">Stay Tuned</p>
-                    <p class="blog-excerpt">Exciting stories and experiences are on the way! Check back for updates on my latest travels, tech projects, and creative pursuits.</p>
-                    <a href="#blog/coming-soon" class="blog-link">Stay Tuned <i class="fas fa-arrow-right"></i></a>
-                </div>
+            
+            <div class="final-reflection">
+                <blockquote>
+                    "For our little crew from VIT Bhopal, Chittorgarh and Udaipur became more than a getaway—they were a plunge into a world of battles won, victories towering overhead, and a courage so fierce it left us speechless, forever bonded by the fearless hearts who shaped this epic land."
+                </blockquote>
+                <cite>- Anurag Waskle</cite>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-header">
-            <h2><span class="section-number">07.</span> Contact</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="contact-content">
-            <div class="contact-text">
-                <h3>Get In Touch</h3>
-                <p>I'm currently looking for new opportunities and internships. Whether you have a question or just want to say hello, I'll try my best to get back to you!</p>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:anuragwaskle2022@gmail.com">anuragwaskle2022@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+918959759566">+91 8959759566</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Khandwa, Indore, MP</span>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="www.linkedin.com/in/anuragwaskle2022" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://github.com/AnuragWaskle?tab=repositories" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/anurag_waskle?igsh=eDQ4Y3JnNXhtcGN3&utm_source=qr" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-                <!-- Add more social links as needed -->
-            </div>
-            <div class="contact-form">
-                <h3>Send a Message</h3>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <!-- Back to Blog -->
+    <div class="back-to-blog">
+        <a href="../index.html#blog" class="blog-back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Blog
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -450,13 +275,13 @@
                 </div>
                 <div class="footer-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#creative">Creative Work</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#creative">Creative Work</a></li>
+                        <li><a href="../index.html#blog">Blog</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -467,77 +292,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript for theme toggle, animations, etc. -->
-    <script>
-        // Theme toggle functionality
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const lightModeToggle = document.getElementById('light-mode-toggle');
-        
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.add('light-mode');
-            darkModeToggle.style.display = 'none';
-            lightModeToggle.style.display = 'block';
-        });
-        
-        lightModeToggle.addEventListener('click', () => {
-            document.body.classList.remove('light-mode');
-            lightModeToggle.style.display = 'none';
-            darkModeToggle.style.display = 'block';
-        });
-
-        // Typewriter effect for hero section
-        const typewriterText = document.getElementById('typewriter-text');
-        const phrases = [
-            "Full Stack Developer",
-            "Web Designer",
-            "Cinematographer",
-            "AI Enthusiast",
-            "Problem Solver"
-        ];
-        
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        
-        function typeWriter() {
-            const currentPhrase = phrases[phraseIndex];
-            
-            if (isDeleting) {
-                typewriterText.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typewriterText.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isDeleting = true;
-                setTimeout(typeWriter, 1500);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                setTimeout(typeWriter, 500);
-            } else {
-                setTimeout(typeWriter, isDeleting ? 100 : 150);
-            }
-        }
-        
-        window.onload = function() {
-            typeWriter();
-        };
-
-        // Mobile navigation toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // You'll add more JavaScript functionality as needed
-    </script>
-
-    <!-- You'll need to add particles.js or a similar library for the background effect -->
+    <script src="script_chittor.js"></script>
 </body>
 </html>
